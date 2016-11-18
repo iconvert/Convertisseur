@@ -55,7 +55,7 @@
             this.btnChiffre1.BackColor = System.Drawing.Color.Gainsboro;
             this.btnChiffre1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiffre1.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiffre1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnChiffre1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnChiffre1.Location = new System.Drawing.Point(46, 112);
             this.btnChiffre1.Name = "btnChiffre1";
             this.btnChiffre1.Size = new System.Drawing.Size(60, 60);
@@ -69,7 +69,7 @@
             this.btnChiffre9.BackColor = System.Drawing.Color.Gainsboro;
             this.btnChiffre9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiffre9.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiffre9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnChiffre9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnChiffre9.Location = new System.Drawing.Point(176, 244);
             this.btnChiffre9.Name = "btnChiffre9";
             this.btnChiffre9.Size = new System.Drawing.Size(61, 60);
@@ -82,7 +82,7 @@
             this.btnChiffre8.BackColor = System.Drawing.Color.Gainsboro;
             this.btnChiffre8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiffre8.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiffre8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnChiffre8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnChiffre8.Location = new System.Drawing.Point(111, 244);
             this.btnChiffre8.Name = "btnChiffre8";
             this.btnChiffre8.Size = new System.Drawing.Size(60, 60);
@@ -95,7 +95,7 @@
             this.btnChiffre7.BackColor = System.Drawing.Color.Gainsboro;
             this.btnChiffre7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiffre7.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiffre7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnChiffre7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnChiffre7.Location = new System.Drawing.Point(46, 244);
             this.btnChiffre7.Name = "btnChiffre7";
             this.btnChiffre7.Size = new System.Drawing.Size(60, 60);
@@ -109,7 +109,7 @@
             this.btnChiffre6.BackColor = System.Drawing.Color.Gainsboro;
             this.btnChiffre6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiffre6.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiffre6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnChiffre6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnChiffre6.Location = new System.Drawing.Point(177, 178);
             this.btnChiffre6.Name = "btnChiffre6";
             this.btnChiffre6.Size = new System.Drawing.Size(60, 60);
@@ -122,7 +122,7 @@
             this.btnChiffre5.BackColor = System.Drawing.Color.Gainsboro;
             this.btnChiffre5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiffre5.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiffre5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnChiffre5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnChiffre5.Location = new System.Drawing.Point(111, 178);
             this.btnChiffre5.Name = "btnChiffre5";
             this.btnChiffre5.Size = new System.Drawing.Size(60, 60);
@@ -135,7 +135,7 @@
             this.btnChiffre4.BackColor = System.Drawing.Color.Gainsboro;
             this.btnChiffre4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiffre4.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiffre4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnChiffre4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnChiffre4.Location = new System.Drawing.Point(45, 178);
             this.btnChiffre4.Name = "btnChiffre4";
             this.btnChiffre4.Size = new System.Drawing.Size(60, 60);
@@ -148,7 +148,7 @@
             this.btnChiffre3.BackColor = System.Drawing.Color.Gainsboro;
             this.btnChiffre3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiffre3.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiffre3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnChiffre3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnChiffre3.Location = new System.Drawing.Point(177, 112);
             this.btnChiffre3.Name = "btnChiffre3";
             this.btnChiffre3.Size = new System.Drawing.Size(60, 60);
@@ -161,7 +161,7 @@
             this.btnChiffre2.BackColor = System.Drawing.Color.Gainsboro;
             this.btnChiffre2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiffre2.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiffre2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnChiffre2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnChiffre2.Location = new System.Drawing.Point(111, 112);
             this.btnChiffre2.Name = "btnChiffre2";
             this.btnChiffre2.Size = new System.Drawing.Size(60, 60);
@@ -174,7 +174,7 @@
             this.btnChiffre0.BackColor = System.Drawing.Color.Gainsboro;
             this.btnChiffre0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChiffre0.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiffre0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnChiffre0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnChiffre0.Location = new System.Drawing.Point(111, 310);
             this.btnChiffre0.Name = "btnChiffre0";
             this.btnChiffre0.Size = new System.Drawing.Size(60, 60);
@@ -184,7 +184,18 @@
             // 
             // Type_unity
             // 
+            this.Type_unity.AutoCompleteCustomSource.AddRange(new string[] {
+            "Température",
+            "Longueur",
+            "Volume",
+            "Poids et masse"});
             this.Type_unity.FormattingEnabled = true;
+            this.Type_unity.Items.AddRange(new object[] {
+            "Volume",
+            "Vitesse",
+            "Température",
+            "Longueur",
+            "Poids et masse"});
             this.Type_unity.Location = new System.Drawing.Point(91, 7);
             this.Type_unity.Name = "Type_unity";
             this.Type_unity.Size = new System.Drawing.Size(106, 21);
@@ -194,13 +205,16 @@
             // textBoxUnity1
             // 
             this.textBoxUnity1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxUnity1.Enabled = false;
             this.textBoxUnity1.Location = new System.Drawing.Point(5, 73);
             this.textBoxUnity1.Name = "textBoxUnity1";
             this.textBoxUnity1.Size = new System.Drawing.Size(100, 20);
             this.textBoxUnity1.TabIndex = 11;
+            this.textBoxUnity1.TextChanged += new System.EventHandler(this.textBoxUnity1_TextChanged);
             // 
             // textBoxUnity2
             // 
+            this.textBoxUnity2.Enabled = false;
             this.textBoxUnity2.Location = new System.Drawing.Point(176, 73);
             this.textBoxUnity2.Name = "textBoxUnity2";
             this.textBoxUnity2.Size = new System.Drawing.Size(100, 20);
@@ -240,12 +254,12 @@
             this.btn_Return.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Return.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Return.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btn_Return.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_Return.Location = new System.Drawing.Point(176, 310);
             this.btn_Return.Name = "btn_Return";
             this.btn_Return.Size = new System.Drawing.Size(60, 60);
             this.btn_Return.TabIndex = 16;
-            this.btn_Return.Text = "←";
+            this.btn_Return.Text = ",";
             this.btn_Return.UseVisualStyleBackColor = false;
             this.btn_Return.Click += new System.EventHandler(this.button1_Click_2);
             // 
@@ -254,13 +268,14 @@
             this.btn_CE.BackColor = System.Drawing.Color.Gainsboro;
             this.btn_CE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CE.Font = new System.Drawing.Font("Brush Script Std", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btn_CE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_CE.Location = new System.Drawing.Point(46, 310);
             this.btn_CE.Name = "btn_CE";
             this.btn_CE.Size = new System.Drawing.Size(60, 60);
             this.btn_CE.TabIndex = 17;
             this.btn_CE.Text = "CE";
             this.btn_CE.UseVisualStyleBackColor = false;
+            this.btn_CE.Click += new System.EventHandler(this.btn_CE_Click);
             // 
             // Form1
             // 
