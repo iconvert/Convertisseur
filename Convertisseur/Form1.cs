@@ -157,6 +157,9 @@ namespace WindowsFormsApplication3
                     case 4:
                         convertPoids(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
                         break;
+                    case 5:
+                        convertDevise(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
                 }
             }
 
