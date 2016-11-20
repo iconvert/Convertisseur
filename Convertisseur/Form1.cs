@@ -135,6 +135,28 @@ namespace WindowsFormsApplication3
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrWhiteSpace(textBoxUnity1.Text))
+            {
+
+                switch (Type_unity.SelectedIndex)
+                {
+                    case 0:
+                        convertVol(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 1:
+                        convertSpeed(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 2:
+                        convertTemp(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 3:
+                        convertLong(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 4:
+                        convertPoids(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                }
+            }
 
         }
 
