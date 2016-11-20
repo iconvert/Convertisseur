@@ -430,55 +430,124 @@ namespace WindowsFormsApplication3
 
         public void convertDevise(double n, string input, string output)
         {
-            double convertVersEuro = 0.0; // convert vers dollar 
+                        
+            double convertVersEuro = 0.0; // convert vers euro
             switch (input)
             {
                 case "Euro":
                     convertVersEuro = n ;
                     break;
                 case "Dollar":
-                    Rates rate = ctx.Rates.FirstOrDefault(r => r.Name == "USD"); //Cherche en BDD la ligne ayant le nom égal à "euro" : [ "euro" | taux | date ]
-                    if (rate != null)
-                    { //S'il a trouvé une valeur
+                    Rates rate = ctx.Rates.FirstOrDefault(r => r.Name == "USD"); //Cherche en BDD la ligne ayant le nom égal à "Dollar" 
+                    
                         double taux = rate.Value; //On récupère le taux
                         convertVersEuro = n / taux; //On convertit
-                    }
+                   
 
                     break;
                 case "Livre sterling":
-                    Rates rate1 = ctx.Rates.FirstOrDefault(r => r.Name == "GBP"); //Cherche en BDD la ligne ayant le nom égal à "euro" : [ "euro" | taux | date ]
-                    if (rate1 != null)
-                    { //S'il a trouvé une valeur
-                        double taux = rate1.Value; //On récupère le taux
-                        convertVersEuro = n / taux; //On convertit
-                    }
+                    Rates rate1 = ctx.Rates.FirstOrDefault(r => r.Name == "GBP"); //Cherche en BDD la ligne ayant le nom égal à "Livre sterling" 
+                    
+                        double taux1 = rate1.Value; //On récupère le taux
+                        convertVersEuro = n / taux1; //On convertit
+                    
                     break;
 
+                case "Yen":
+                    Rates rate2 = ctx.Rates.FirstOrDefault(r => r.Name == "JPY"); //Cherche en BDD la ligne ayant le nom égal à "Yen" 
+                    
+                        double taux2 = rate2.Value; //On récupère le taux
+                        convertVersEuro = n / taux2; //On convertit
+                    
+                    break;
+
+                case "Dollar Canadien":
+                    Rates rate3= ctx.Rates.FirstOrDefault(r => r.Name == "CAD"); //Cherche en BDD la ligne ayant le nom égal à "Dollar Canadien" 
+                   
+                        double taux3 = rate3.Value; //On récupère le taux
+                        convertVersEuro = n / taux3; //On convertit
+                    
+                    break;
+
+                case "Yuan":
+                    Rates rate4 = ctx.Rates.FirstOrDefault(r => r.Name == "CNY"); //Cherche en BDD la ligne ayant le nom égal à "Yuan" 
+                   
+                        double taux4 = rate4.Value; //On récupère le taux
+                        convertVersEuro = n / taux4; //On convertit
+                    
+                    break;
+
+                case "Couronne":
+                    Rates rate5 = ctx.Rates.FirstOrDefault(r => r.Name == "SEK"); //Cherche en BDD la ligne ayant le nom égal à "Couronne" 
+                   
+                        double taux5 = rate5.Value; //On récupère le taux
+                        convertVersEuro = n / taux5; //On convertit
+                    
+                    break;
+
+
             }
-            switch (output) // Dollar vers unité de sortie
+            switch (output) // EURO vers unité de sortie
             {
                 case "Euro":
-                    textBoxUnity2.Text = ((convertVersEuro ).ToString());
-                    break;
-                case "Dollar":
-                    Rates rate = ctx.Rates.FirstOrDefault(r => r.Name == "USD"); //Cherche en BDD la ligne ayant le nom égal à "euro" : [ "euro" | taux | date ]
-                    if (rate != null)
-                    { //S'il a trouvé une valeur
-                        double taux = rate.Value; //On récupère le taux
-                        convertVersEuro = n * taux; //On convertit
-                    }
                     textBoxUnity2.Text = ((convertVersEuro).ToString());
                     break;
+
+                case "Dollar":
+                    Rates rate = ctx.Rates.FirstOrDefault(r => r.Name == "USD"); //Cherche en BDD la ligne ayant le nom égal à "DOllar" 
+                    
+                        double taux = rate.Value; //On récupère le taux
+                        
+                    
+                    textBoxUnity2.Text = ((convertVersEuro* taux).ToString());
+                    break;
+
                 case "Livre sterling":
                     Rates rate1 = ctx.Rates.FirstOrDefault(r => r.Name == "GBP"); //Cherche en BDD la ligne ayant le nom égal à "euro" : [ "euro" | taux | date ]
-                    if (rate1 != null)
-                    { //S'il a trouvé une valeur
-                        double taux = rate1.Value; //On récupère le taux
-                        convertVersEuro = n * taux; //On convertit
-                    }
-                    textBoxUnity2.Text = ((convertVersEuro  ).ToString());
+                   
+                        double taux1 = rate1.Value; //On récupère le taux
+                        
+                    
+                    textBoxUnity2.Text = ((convertVersEuro* taux1).ToString());
+                    break;
+
+                case "Yen":
+                    Rates rate2 = ctx.Rates.FirstOrDefault(r => r.Name == "JPY"); //Cherche en BDD la ligne ayant le nom égal à "Yen" 
+                    
+                        double taux2 = rate2.Value; //On récupère le taux
+                        
+                    
+                    textBoxUnity2.Text = ((convertVersEuro* taux2).ToString());
+                    break;
+
+                case "Dollar Canadien":
+                    Rates rate3 = ctx.Rates.FirstOrDefault(r => r.Name == "CAD"); //Cherche en BDD la ligne ayant le nom égal à "Dollar Canadien" 
+                    
+                        double taux3 = rate3.Value; //On récupère le taux
+                        
+                    
+                    textBoxUnity2.Text = ((convertVersEuro* taux3).ToString());
+                    break;
+
+                case "Yuan":
+                    Rates rate4 = ctx.Rates.FirstOrDefault(r => r.Name == "CNY"); //Cherche en BDD la ligne ayant le nom égal à "Yuan" 
+                    
+                        double taux4 = rate4.Value; //On récupère le taux
+                        
+                    
+                    textBoxUnity2.Text = ((convertVersEuro* taux4).ToString());
+                    break;
+
+                case "Couronne":
+                    Rates rate5 = ctx.Rates.FirstOrDefault(r => r.Name == "SEK"); //Cherche en BDD la ligne ayant le nom égal à "Couronne" 
+                   
+                        double taux5 = rate5.Value; //On récupère le taux
+                     
+                   
+                    textBoxUnity2.Text = ((convertVersEuro* taux5).ToString());
                     break;
             }
+
         }
 
         // ici il y a toutes les touches du clavier avec la touche CE qui efface les deux textboxs
