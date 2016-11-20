@@ -45,7 +45,7 @@
             this.unity1 = new System.Windows.Forms.ComboBox();
             this.unity2 = new System.Windows.Forms.ComboBox();
             this.exchangePicture = new System.Windows.Forms.PictureBox();
-            this.btn_Return = new System.Windows.Forms.Button();
+            this.btn_point = new System.Windows.Forms.Button();
             this.btn_CE = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.exchangePicture)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +76,7 @@
             this.btnChiffre9.TabIndex = 1;
             this.btnChiffre9.Text = "9";
             this.btnChiffre9.UseVisualStyleBackColor = false;
+            this.btnChiffre9.Click += new System.EventHandler(this.btnChiffre9_Click);
             // 
             // btnChiffre8
             // 
@@ -89,6 +90,7 @@
             this.btnChiffre8.TabIndex = 2;
             this.btnChiffre8.Text = "8";
             this.btnChiffre8.UseVisualStyleBackColor = false;
+            this.btnChiffre8.Click += new System.EventHandler(this.btnChiffre8_Click);
             // 
             // btnChiffre7
             // 
@@ -102,7 +104,7 @@
             this.btnChiffre7.TabIndex = 3;
             this.btnChiffre7.Text = "7";
             this.btnChiffre7.UseVisualStyleBackColor = false;
-            this.btnChiffre7.Click += new System.EventHandler(this.button4_Click);
+            this.btnChiffre7.Click += new System.EventHandler(this.btnChiffre7_Click);
             // 
             // btnChiffre6
             // 
@@ -116,6 +118,7 @@
             this.btnChiffre6.TabIndex = 4;
             this.btnChiffre6.Text = "6";
             this.btnChiffre6.UseVisualStyleBackColor = false;
+            this.btnChiffre6.Click += new System.EventHandler(this.btnChiffre6_Click);
             // 
             // btnChiffre5
             // 
@@ -129,6 +132,7 @@
             this.btnChiffre5.TabIndex = 5;
             this.btnChiffre5.Text = "5";
             this.btnChiffre5.UseVisualStyleBackColor = false;
+            this.btnChiffre5.Click += new System.EventHandler(this.btnChiffre5_Click);
             // 
             // btnChiffre4
             // 
@@ -142,6 +146,7 @@
             this.btnChiffre4.TabIndex = 6;
             this.btnChiffre4.Text = "4";
             this.btnChiffre4.UseVisualStyleBackColor = false;
+            this.btnChiffre4.Click += new System.EventHandler(this.btnChiffre4_Click);
             // 
             // btnChiffre3
             // 
@@ -155,6 +160,7 @@
             this.btnChiffre3.TabIndex = 7;
             this.btnChiffre3.Text = "3";
             this.btnChiffre3.UseVisualStyleBackColor = false;
+            this.btnChiffre3.Click += new System.EventHandler(this.btnChiffre3_Click);
             // 
             // btnChiffre2
             // 
@@ -168,6 +174,7 @@
             this.btnChiffre2.TabIndex = 8;
             this.btnChiffre2.Text = "2";
             this.btnChiffre2.UseVisualStyleBackColor = false;
+            this.btnChiffre2.Click += new System.EventHandler(this.btnChiffre2_Click);
             // 
             // btnChiffre0
             // 
@@ -181,6 +188,7 @@
             this.btnChiffre0.TabIndex = 9;
             this.btnChiffre0.Text = "0";
             this.btnChiffre0.UseVisualStyleBackColor = false;
+            this.btnChiffre0.Click += new System.EventHandler(this.btnChiffre0_Click);
             // 
             // Type_unity
             // 
@@ -195,7 +203,8 @@
             "Vitesse",
             "Température",
             "Longueur",
-            "Poids et masse"});
+            "Poids et masse",
+            "Devises"});
             this.Type_unity.Location = new System.Drawing.Point(91, 7);
             this.Type_unity.Name = "Type_unity";
             this.Type_unity.Size = new System.Drawing.Size(106, 21);
@@ -249,19 +258,19 @@
             this.exchangePicture.TabStop = false;
             this.exchangePicture.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btn_Return
+            // btn_point
             // 
-            this.btn_Return.BackColor = System.Drawing.Color.Gainsboro;
-            this.btn_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Return.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Return.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_Return.Location = new System.Drawing.Point(176, 310);
-            this.btn_Return.Name = "btn_Return";
-            this.btn_Return.Size = new System.Drawing.Size(60, 60);
-            this.btn_Return.TabIndex = 16;
-            this.btn_Return.Text = ",";
-            this.btn_Return.UseVisualStyleBackColor = false;
-            this.btn_Return.Click += new System.EventHandler(this.button1_Click_2);
+            this.btn_point.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_point.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_point.Font = new System.Drawing.Font("Brush Script Std", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_point.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_point.Location = new System.Drawing.Point(176, 310);
+            this.btn_point.Name = "btn_point";
+            this.btn_point.Size = new System.Drawing.Size(60, 60);
+            this.btn_point.TabIndex = 16;
+            this.btn_point.Text = ",";
+            this.btn_point.UseVisualStyleBackColor = false;
+            this.btn_point.Click += new System.EventHandler(this.btnPoint);
             // 
             // btn_CE
             // 
@@ -284,7 +293,7 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(286, 382);
             this.Controls.Add(this.btn_CE);
-            this.Controls.Add(this.btn_Return);
+            this.Controls.Add(this.btn_point);
             this.Controls.Add(this.exchangePicture);
             this.Controls.Add(this.unity2);
             this.Controls.Add(this.unity1);
@@ -328,7 +337,7 @@
         private System.Windows.Forms.ComboBox unity1;
         private System.Windows.Forms.ComboBox unity2;
         private System.Windows.Forms.PictureBox exchangePicture;
-        private System.Windows.Forms.Button btn_Return;
+        private System.Windows.Forms.Button btn_point;
         private System.Windows.Forms.Button btn_CE;
     }
 }

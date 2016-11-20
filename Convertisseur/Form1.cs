@@ -34,7 +34,7 @@ namespace WindowsFormsApplication3
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,7 +95,10 @@ namespace WindowsFormsApplication3
                         "cm",
                         "dm",
                         "m",
-                        "km"
+                        "km",
+                        "pouce",
+                        "pied",
+                        "mile"
                     };
                     unity1.DataSource = new List<String>(unityList3);
                     unity2.DataSource = new List<String>(unityList3);
@@ -107,12 +110,26 @@ namespace WindowsFormsApplication3
                         "mg",
                         "g",
                         "kg",
+                        "once",
                         "livre",
                     };
                     unity1.DataSource = new List<String>(unityList4);
                     unity2.DataSource = new List<String>(unityList4);
                     break;
+                case 5:
+                    List<String> unityList5 = new List<string>()
+                    {
+                        "Euro",
+                        "Dollar",
+                        "Livre",
+                    };
+                    unity1.DataSource = new List<String>(unityList5);
+                    unity2.DataSource = new List<String>(unityList5);
+                    break;
+
+
             }
+
             Console.WriteLine("Item changed");
         }
 
@@ -128,11 +145,27 @@ namespace WindowsFormsApplication3
 
         private void textBoxUnity1_TextChanged(object sender, EventArgs e)
         {
-            switch (Type_unity.SelectedIndex)
+            if (!string.IsNullOrWhiteSpace(textBoxUnity1.Text))
             {
-                case 0:
-                    convertVol(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
-                    break;
+
+                switch (Type_unity.SelectedIndex)
+                {
+                    case 0:
+                        convertVol(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 1:
+                        convertSpeed(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 2:
+                        convertTemp(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 3:
+                        convertLong(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 4:
+                        convertPoids(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                }
             }
         }
         public void convertVol(double n, string input, string output)
@@ -148,6 +181,9 @@ namespace WindowsFormsApplication3
                     break;
                 case "dl":
                     convVersL = n / 10;
+                    break;
+                case "l":
+                    convVersL = n * 1;
                     break;
                 case "dm3":
                     convVersL = n*1;
@@ -167,22 +203,244 @@ namespace WindowsFormsApplication3
                     textBoxUnity2.Text = ((convVersL * 100).ToString());
                     break;
                 case "dl":
-                    convVersL = n / 10;
+                    textBoxUnity2.Text = ((convVersL * 10).ToString());
                     break;
                 case "dm3":
-                    convVersL = n * 1;
+                    textBoxUnity2.Text = ((convVersL * 1).ToString());
+                    break;
+                case "l":
+                    textBoxUnity2.Text = ((convVersL * 1).ToString());
                     break;
                 case "m3":
-                    convVersL = n * 1000;
+                    textBoxUnity2.Text = ((convVersL / 1000).ToString());
                     break;
 
 
             }
         }
 
+        public void convertSpeed(double n, string input, string output)
+        {
+            double convVersMs = 0.0;
+            switch (input)
+            {
+                case "m/s":
+                    convVersMs = n / 1;
+                    break;
+                case "km/h":
+                    convVersMs = n / 3.6 ;
+                    break;
+                case "mph":
+                    convVersMs = n / 2.237136;
+                    break;
+
+            }
+            switch (output)
+            {
+                case "m/s":
+                    textBoxUnity2.Text = ((convVersMs * 1).ToString());
+                    break;
+                case "km/h":
+                    textBoxUnity2.Text = ((convVersMs * 3.6).ToString());
+                    break;
+                case "mph":
+                    textBoxUnity2.Text = ((convVersMs * 2.237136).ToString());
+                    break;
+            }
+        }
+
+        public void convertTemp(double n, string input, string output)
+        {
+            double convVersC = 0.0;
+            switch (input)
+            {
+                case "Celcius":
+                    convVersC = n ;
+                    break;
+                case "Kelvin":
+                    convVersC = n + 273.15;
+                    break;
+                case "Fahrenheit":
+                    convVersC = 1.8*n + 32;
+                    break;
+
+            }
+            switch (output)
+            {
+                case "Celcius":
+                    textBoxUnity2.Text = ((convVersC ).ToString());
+                    break;
+                case "kelvin":
+                    textBoxUnity2.Text = ((convVersC - 273.15).ToString());
+                    break;
+                case "Fahrenheit":
+                    textBoxUnity2.Text = (((convVersC - 32)/1.8).ToString());
+                    break;
+            }
+        }
+
+        public void convertLong(double n, string input, string output)
+        {
+            double convVersM = 0.0;
+            switch (input)
+            {
+                case "mm":
+                    convVersM = n / 1000;
+                    break;
+                case "cm":
+                    convVersM = n / 100;
+                    break;
+                case "dm":
+                    convVersM = n / 10;
+                    break;
+                case "m":
+                    convVersM = n * 1;
+                    break;
+                case "km":
+                    convVersM = n * 1000;
+                    break;
+                case "pouce":
+                    convVersM = n * 0.0254;
+                    break;
+                case "pied":
+                    convVersM = n * 0.3048;
+                    break;
+                case "mile":
+                    convVersM = n * 1609.344;
+                    break;
+
+
+            }
+            switch (output)
+            {
+                case "mm":
+                    textBoxUnity2.Text = ((convVersM * 1000).ToString());
+                    break;
+                case "cm":
+                    textBoxUnity2.Text = ((convVersM * 100).ToString());
+                    break;
+                case "dm":
+                    textBoxUnity2.Text = ((convVersM * 10).ToString());
+                    break;
+                case "m":
+                    textBoxUnity2.Text = ((convVersM * 1).ToString());
+                    break;
+                case "km":
+                    textBoxUnity2.Text = ((convVersM * 1000).ToString());
+                    break;
+                case "pouce":
+                    textBoxUnity2.Text = ((convVersM / 0.0254).ToString());
+                    break;
+                case "pied":
+                    textBoxUnity2.Text = ((convVersM / 0.3048).ToString());
+                    break;
+                case "mile":
+                    textBoxUnity2.Text = ((convVersM / 1609.344).ToString());
+                    break;
+
+
+
+            }
+        }
+        public void convertPoids(double n, string input, string output)
+        {
+            double convVersG = 0.0;
+            switch (input)
+            {
+                case "mg":
+                    convVersG = n / 1000;
+                    break;
+                case "g":
+                    convVersG = n ;
+                    break;
+                case "kg":
+                    convVersG = n *1000;
+                    break;
+                case "once":
+                    convVersG = n * 28.34952;
+                    break;
+                case "livre":
+                    convVersG = n * 453.5924;
+                    break;
+
+
+            }
+            switch (output)
+            {
+                case "mg":
+                    textBoxUnity2.Text = ((convVersG * 1000).ToString());
+                    break;
+                case "g":
+                    textBoxUnity2.Text = ((convVersG ).ToString());
+                    break;
+                case "kg":
+                    textBoxUnity2.Text = ((convVersG / 1000).ToString());
+                    break;
+                case "once":
+                    textBoxUnity2.Text = ((convVersG / 28.34952).ToString());
+                    break;
+                case "livre":
+                    textBoxUnity2.Text = ((convVersG / 453.5924).ToString());
+                    break;
+
+            }
+        }
+
+
         private void btn_CE_Click(object sender, EventArgs e)
         {
             textBoxUnity1.Text = "";
+            textBoxUnity2.Text = "";
+        }
+
+        private void btnChiffre2_Click(object sender, EventArgs e)
+        {
+            textBoxUnity1.Text = (textBoxUnity1.Text + "2");
+        }
+
+        private void btnChiffre3_Click(object sender, EventArgs e)
+        {
+            textBoxUnity1.Text = (textBoxUnity1.Text + "3");
+        }
+
+        private void btnChiffre4_Click(object sender, EventArgs e)
+        {
+            textBoxUnity1.Text = (textBoxUnity1.Text + "4");
+        }
+
+        private void btnChiffre5_Click(object sender, EventArgs e)
+        {
+            textBoxUnity1.Text = (textBoxUnity1.Text + "5");
+        }
+
+        private void btnChiffre6_Click(object sender, EventArgs e)
+        {
+            textBoxUnity1.Text = (textBoxUnity1.Text + "6");
+        }
+
+        private void btnChiffre7_Click(object sender, EventArgs e)
+        {
+            textBoxUnity1.Text = (textBoxUnity1.Text + "7");
+        }
+
+        private void btnChiffre8_Click(object sender, EventArgs e)
+        {
+            textBoxUnity1.Text = (textBoxUnity1.Text + "8");
+        }
+
+        private void btnChiffre9_Click(object sender, EventArgs e)
+        {
+            textBoxUnity1.Text = (textBoxUnity1.Text + "9");
+        }
+
+        private void btnChiffre0_Click(object sender, EventArgs e)
+        {
+            textBoxUnity1.Text = (textBoxUnity1.Text + "0");
+        }
+
+        private void btnPoint(object sender, EventArgs e)
+        {
+            textBoxUnity1.Text = (textBoxUnity1.Text + ",");
         }
     }
 }
