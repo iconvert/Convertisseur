@@ -251,6 +251,7 @@
             // exchangePicture
             // 
             this.exchangePicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.exchangePicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exchangePicture.Image = ((System.Drawing.Image)(resources.GetObject("exchangePicture.Image")));
             this.exchangePicture.Location = new System.Drawing.Point(111, 46);
             this.exchangePicture.Name = "exchangePicture";
