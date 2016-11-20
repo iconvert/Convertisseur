@@ -8,13 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApplication3
 {
     public partial class Form1 : Form
     {
+        private CurrentRatesDataContext ctx;
+
         public Form1()
         {
             InitializeComponent();
+            this.ctx = new CurrentRatesDataContext();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -26,6 +30,7 @@ namespace WindowsFormsApplication3
         {
 
         }
+        
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -123,7 +128,11 @@ namespace WindowsFormsApplication3
                     {
                         "Euro",
                         "Dollar",
-                        "Livre",
+                        "Livre sterling",
+                        "Yen",
+                        "Dollar Canadien",
+                        "Yuan",
+                        "Couronne"
                     };
                     unity1.DataSource = new List<String>(unityList5);
                     unity2.DataSource = new List<String>(unityList5);
@@ -421,30 +430,53 @@ namespace WindowsFormsApplication3
 
         public void convertDevise(double n, string input, string output)
         {
-            double convVersDollar = 0.0; // convert vers dollar 
+            double convertVersEuro = 0.0; // convert vers dollar 
             switch (input)
             {
                 case "Euro":
-                    convVersDollar = n / 1.059;
+                    convertVersEuro = n ;
                     break;
                 case "Dollar":
-                    convVersDollar = n ;
+                    Rates rate = ctx.Rates.FirstOrDefault(r => r.Name == "USD"); //Cherche en BDD la ligne ayant le nom égal à "euro" : [ "euro" | taux | date ]
+                    if (rate != null)
+                    { //S'il a trouvé une valeur
+                        double taux = rate.Value; //On récupère le taux
+                        convertVersEuro = n / taux; //On convertit
+                    }
+
                     break;
-                case "Livre":
-                    convVersDollar = n / 0.857;
+                case "Livre sterling":
+                    Rates rate1 = ctx.Rates.FirstOrDefault(r => r.Name == "GBP"); //Cherche en BDD la ligne ayant le nom égal à "euro" : [ "euro" | taux | date ]
+                    if (rate1 != null)
+                    { //S'il a trouvé une valeur
+                        double taux = rate1.Value; //On récupère le taux
+                        convertVersEuro = n / taux; //On convertit
+                    }
                     break;
 
             }
             switch (output) // Dollar vers unité de sortie
             {
                 case "Euro":
-                    textBoxUnity2.Text = ((convVersDollar * 1.059).ToString());
+                    textBoxUnity2.Text = ((convertVersEuro ).ToString());
                     break;
                 case "Dollar":
-                    textBoxUnity2.Text = ((convVersDollar).ToString());
+                    Rates rate = ctx.Rates.FirstOrDefault(r => r.Name == "USD"); //Cherche en BDD la ligne ayant le nom égal à "euro" : [ "euro" | taux | date ]
+                    if (rate != null)
+                    { //S'il a trouvé une valeur
+                        double taux = rate.Value; //On récupère le taux
+                        convertVersEuro = n * taux; //On convertit
+                    }
+                    textBoxUnity2.Text = ((convertVersEuro).ToString());
                     break;
-                case "Livre":
-                    textBoxUnity2.Text = ((convVersDollar * 0.857 ).ToString());
+                case "Livre sterling":
+                    Rates rate1 = ctx.Rates.FirstOrDefault(r => r.Name == "GBP"); //Cherche en BDD la ligne ayant le nom égal à "euro" : [ "euro" | taux | date ]
+                    if (rate1 != null)
+                    { //S'il a trouvé une valeur
+                        double taux = rate1.Value; //On récupère le taux
+                        convertVersEuro = n * taux; //On convertit
+                    }
+                    textBoxUnity2.Text = ((convertVersEuro  ).ToString());
                     break;
             }
         }
