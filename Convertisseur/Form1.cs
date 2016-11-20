@@ -190,6 +190,9 @@ namespace WindowsFormsApplication3
                     case 4:
                         convertPoids(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
                         break;
+                    case 5:
+                        convertDevise(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
                 }
             }
         }
@@ -410,6 +413,36 @@ namespace WindowsFormsApplication3
                     textBoxUnity2.Text = ((convVersG / 453.5924).ToString());
                     break;
 
+            }
+        }
+
+        public void convertDevise(double n, string input, string output)
+        {
+            double convVersDollar = 0.0; // convert vers dollar 
+            switch (input)
+            {
+                case "Euro":
+                    convVersDollar = n / 1.059;
+                    break;
+                case "Dollar":
+                    convVersDollar = n ;
+                    break;
+                case "Livre":
+                    convVersDollar = n / 0.857;
+                    break;
+
+            }
+            switch (output) // Dollar vers unité de sortie
+            {
+                case "Euro":
+                    textBoxUnity2.Text = ((convVersDollar * 1.059).ToString());
+                    break;
+                case "Dollar":
+                    textBoxUnity2.Text = ((convVersDollar).ToString());
+                    break;
+                case "Livre":
+                    textBoxUnity2.Text = ((convVersDollar * 0.857 ).ToString());
+                    break;
             }
         }
 
