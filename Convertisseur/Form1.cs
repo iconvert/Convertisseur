@@ -42,10 +42,34 @@ namespace WindowsFormsApplication3
         {
             
         }
-
+        // fonction qui permet de convertir des que la textbox change sauf si elle est vide des que l'unité d'entrée change 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrWhiteSpace(textBoxUnity1.Text))
+            {
+                // appel des fonction de conversion suivant le type d'unité choisi
+                switch (Type_unity.SelectedIndex)
+                {
+                    case 0:
+                        convertVol(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 1:
+                        convertSpeed(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 2:
+                        convertTemp(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 3:
+                        convertLong(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 4:
+                        convertPoids(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 5:
+                        convertDevise(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                }
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -178,7 +202,7 @@ namespace WindowsFormsApplication3
         {
 
         }
-        // fonction qui permet de convertir des que la textbox change sauf si elle est vide 
+        // fonction qui permet de convertir des que la textbox change sauf si elle est vide des que le text change 
         private void textBoxUnity1_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(textBoxUnity1.Text))
@@ -607,9 +631,35 @@ namespace WindowsFormsApplication3
             textBoxUnity1.Text = (textBoxUnity1.Text + ",");
         }
 
+        // fonction qui permet de convertir des que la textbox change sauf si elle est vide des que l'unité sortie change 
+
         private void unity1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (!string.IsNullOrWhiteSpace(textBoxUnity1.Text))
+            {
+                // appel des fonction de conversion suivant le type d'unité choisi
+                switch (Type_unity.SelectedIndex)
+                {
+                    case 0:
+                        convertVol(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 1:
+                        convertSpeed(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 2:
+                        convertTemp(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 3:
+                        convertLong(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 4:
+                        convertPoids(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                    case 5:
+                        convertDevise(Convert.ToDouble(textBoxUnity1.Text), unity1.Text, unity2.Text);
+                        break;
+                }
+            }
         }
     }
 }
