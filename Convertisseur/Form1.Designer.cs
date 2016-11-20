@@ -237,6 +237,7 @@
             this.unity1.Name = "unity1";
             this.unity1.Size = new System.Drawing.Size(100, 21);
             this.unity1.TabIndex = 13;
+            this.unity1.SelectedIndexChanged += new System.EventHandler(this.unity1_SelectedIndexChanged);
             // 
             // unity2
             // 

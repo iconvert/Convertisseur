@@ -258,10 +258,10 @@ namespace WindowsFormsApplication3
                     convVersC = n ;
                     break;
                 case "Kelvin":
-                    convVersC = n + 273.15;
+                    convVersC = n - 273.15;
                     break;
                 case "Fahrenheit":
-                    convVersC = 1.8*n + 32;
+                    convVersC = (n - 32)/ 1.8;
                     break;
 
             }
@@ -270,11 +270,11 @@ namespace WindowsFormsApplication3
                 case "Celcius":
                     textBoxUnity2.Text = ((convVersC ).ToString());
                     break;
-                case "kelvin":
-                    textBoxUnity2.Text = ((convVersC - 273.15).ToString());
+                case "Kelvin":
+                    textBoxUnity2.Text = ((convVersC + 273.15).ToString());
                     break;
                 case "Fahrenheit":
-                    textBoxUnity2.Text = (((convVersC - 32)/1.8).ToString());
+                    textBoxUnity2.Text = (((convVersC * 1.8) + 32).ToString());
                     break;
             }
         }
@@ -441,6 +441,11 @@ namespace WindowsFormsApplication3
         private void btnPoint(object sender, EventArgs e)
         {
             textBoxUnity1.Text = (textBoxUnity1.Text + ",");
+        }
+
+        private void unity1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
