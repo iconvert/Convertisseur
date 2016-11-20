@@ -29,6 +29,7 @@ namespace WindowsFormsApplication3
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            // bonton 1 ecrit dans la textbox 1 
             textBoxUnity1.Text = (textBoxUnity1.Text + "1");
         }
 
@@ -49,6 +50,7 @@ namespace WindowsFormsApplication3
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // des que l'on change d'element dans la combobox des types d'unités on met la collection correspondante dans les combobox de selection d'untité
             ComboBox unity = (ComboBox)sender;
             switch (unity.SelectedIndex)
             {
@@ -130,14 +132,14 @@ namespace WindowsFormsApplication3
 
             }
 
-            Console.WriteLine("Item changed");
+            //Console.WriteLine("Item changed");
         }
-
+        // pour convertir la textbox en cliquant sur l'image de conversion, en cas de changement d'untié sans changé la valeur dans la textbox
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(textBoxUnity1.Text))
             {
-
+                // appel des fonction de conversion suivant le type d'unité choisi
                 switch (Type_unity.SelectedIndex)
                 {
                     case 0:
@@ -164,11 +166,12 @@ namespace WindowsFormsApplication3
         {
 
         }
-
+        // fonction qui permet de convertir des que la textbox change sauf si elle est vide 
         private void textBoxUnity1_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(textBoxUnity1.Text))
             {
+                // appel des fonction de conversion suivant le type d'unité choisi
 
                 switch (Type_unity.SelectedIndex)
                 {
@@ -190,9 +193,11 @@ namespace WindowsFormsApplication3
                 }
             }
         }
+
+        // les differentes fonction pour convertir. Pour eviter le nombre de possiblité on passe à chaque fois par une unité de reférence puis on reconvertit.
         public void convertVol(double n, string input, string output)
         {
-            double convVersL = 0.0;
+            double convVersL = 0.0; // convert vers litre sde l'unité selectionné
             switch (input)
             {
                 case "ml":
@@ -216,7 +221,7 @@ namespace WindowsFormsApplication3
 
                    
             }
-            switch (output)
+            switch (output) // Puis pour la sortie de litre vers la deuxieme unité
             {
                 case "ml":
                     textBoxUnity2.Text = ((convVersL * 1000).ToString());
@@ -243,7 +248,7 @@ namespace WindowsFormsApplication3
 
         public void convertSpeed(double n, string input, string output)
         {
-            double convVersMs = 0.0;
+            double convVersMs = 0.0; // même pricipe avec m/s.
             switch (input)
             {
                 case "m/s":
@@ -257,7 +262,7 @@ namespace WindowsFormsApplication3
                     break;
 
             }
-            switch (output)
+            switch (output) // m/s vers unité de sortie
             {
                 case "m/s":
                     textBoxUnity2.Text = ((convVersMs * 1).ToString());
@@ -273,7 +278,7 @@ namespace WindowsFormsApplication3
 
         public void convertTemp(double n, string input, string output)
         {
-            double convVersC = 0.0;
+            double convVersC = 0.0; // convert vers Celcius 
             switch (input)
             {
                 case "Celcius":
@@ -287,7 +292,7 @@ namespace WindowsFormsApplication3
                     break;
 
             }
-            switch (output)
+            switch (output) // Celcius vers unité de sortie
             {
                 case "Celcius":
                     textBoxUnity2.Text = ((convVersC ).ToString());
@@ -303,7 +308,7 @@ namespace WindowsFormsApplication3
 
         public void convertLong(double n, string input, string output)
         {
-            double convVersM = 0.0;
+            double convVersM = 0.0;// convert vers metre 
             switch (input)
             {
                 case "mm":
@@ -333,7 +338,7 @@ namespace WindowsFormsApplication3
 
 
             }
-            switch (output)
+            switch (output) // metre vers la sortie
             {
                 case "mm":
                     textBoxUnity2.Text = ((convVersM * 1000).ToString());
@@ -366,7 +371,7 @@ namespace WindowsFormsApplication3
         }
         public void convertPoids(double n, string input, string output)
         {
-            double convVersG = 0.0;
+            double convVersG = 0.0; // convert vers gramme
             switch (input)
             {
                 case "mg":
@@ -387,7 +392,7 @@ namespace WindowsFormsApplication3
 
 
             }
-            switch (output)
+            switch (output) // puis de gramme vers la sortie
             {
                 case "mg":
                     textBoxUnity2.Text = ((convVersG * 1000).ToString());
@@ -408,7 +413,7 @@ namespace WindowsFormsApplication3
             }
         }
 
-
+        // ici il y a toutes les touches du clavier avec la touche CE qui efface les deux textboxs
         private void btn_CE_Click(object sender, EventArgs e)
         {
             textBoxUnity1.Text = "";
